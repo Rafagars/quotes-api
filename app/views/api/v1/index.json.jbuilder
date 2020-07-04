@@ -3,3 +3,5 @@
   json.quote quote.quote
   json.person quote.person
 end
+
+will_paginate @quotes
