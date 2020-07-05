@@ -14,7 +14,7 @@
       <li>The random function returns a random quote and its endpoint is: <code>api/v1/random/</code> </li>
     </ul>
 
-    <h5>Returned fields</h5>
+   <h5>Returned fields</h5>
     <ul>
       <li><code>id</code>: The id of the quote</li>
       <li><code>person</code>: Person who belongs the quote</li>
