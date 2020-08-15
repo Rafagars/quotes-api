@@ -43,6 +43,10 @@ class QuotesController < ApplicationController
     redirect_to quotes_path
   end
 
+  def search
+    @quotes = Quote.where("person = ?", params[:q]).paginate(page: params[:page])
+  end
+
   private
   def set_quote
     @quote = Quote.find(params[:id])

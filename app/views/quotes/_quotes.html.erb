@@ -1,0 +1,17 @@
+<% @quotes.each do |quote| %>
+  <div class="card mb-4">
+    <div class="card-body">
+      <p class="card-text">
+        <i>"<%= quote.quote %>"</i>
+      <h6 class="float-right"><%= quote.person %></h6>
+      <% if admin_signed_in? %>
+        <%= link_to 'Edit', edit_quote_path(quote) %> |
+        <%= link_to 'Delete', quote_path(quote), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+      </p>
+    </div>
+  </div>
+<% end %>
+<div class="digg_pagination">
+  <%= will_paginate %>
+</div>

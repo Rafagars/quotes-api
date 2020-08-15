@@ -1,19 +1,9 @@
 <div class="container">
   <br>
-  <div class="text-center">
-    <%=  link_to 'Create Quote', new_quote_path, class: 'btn btn-primary mb-3' %>
-  </div>
-  <% @quotes.each do |quote| %>
-    <div class="card mb-4">
-      <div class="card-body">
-        <p class="card-text">
-          <i>"<%= quote.quote %>"</i>
-          <h6 class="float-right"><%= quote.person %></h6>
-        </p>
-      </div>
+  <% if admin_signed_in? %>
+    <div class="text-center">
+      <%=  link_to 'Create Quote', new_quote_path, class: 'btn btn-primary mb-3' %>
     </div>
   <% end %>
-  <div class="digg_pagination">
-    <%= will_paginate %>
-  </div>
+  <%= render 'quotes/quotes' %>
 </div>

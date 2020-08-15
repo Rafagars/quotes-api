@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admins
   root 'static_pages#home'
+  get '/search', to: 'quotes#search'
   namespace :api do
     namespace :v1 do
       root 'quotes#index'
