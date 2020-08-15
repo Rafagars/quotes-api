@@ -1,0 +1,8 @@
+<div class="container">
+  <%= form_for @quote do |f| %>
+    <%= f.text_area :quote, autocomplete: 'off', placeholder: "Write the quote here....", class: 'form-control mb-2' %>
+    <%= f.text_field :person, placeholder: 'Person' ,class: 'form-control mb-3' %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+
+</div>

@@ -72,3 +72,5 @@ gem "will_paginate", "~> 3.3"
 gem "bootstrap", "~> 4.5"
 
 gem "jquery-rails", "~> 4.4"
+
+gem "devise", "~> 4.7"
