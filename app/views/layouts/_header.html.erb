@@ -1,10 +1,10 @@
 <header class="navbar nav-expand navbar-dark bg-dark">
   <h1 class="nav-brand"><%= link_to 'Quotes-API', root_path, class: 'nav-link text-white' %></h1>
+  <%= link_to 'Quotes', quotes_path, class: 'nav-link nav-item text-white' %>
+  <form action="/search">
+    <input class="form-control" type="text" name="q" placeholder="Search...">
+  </form>
   <% if admin_signed_in? %>
-    <%= link_to 'Quotes', quotes_path, class: 'nav-link nav-item text-white' %>
-    <form action="/search">
-      <input class="form-control" type="text" name="q" placeholder="Search...">
-    </form>
     <%= link_to 'Logout', destroy_admin_session_path, :method => :delete, class: 'nav-link nav-item text-white'  %>
   <% end %>
 </header>
