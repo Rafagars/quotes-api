@@ -4,7 +4,7 @@ class QuotesController < ApplicationController
   before_action :set_quote, only: [:edit, :update, :destroy]
 
   def index
-    @quotes = Quote.paginate(page: params[:page], per_page: 10)
+    @quotes = Quote.order('created_at DESC').paginate(page: params[:page], per_page: 10)
   end
 
   def new
